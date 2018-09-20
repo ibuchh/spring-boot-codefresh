@@ -25,5 +25,5 @@ steps:
     type: push
     candidate: '${{BuildingSpringDockerImage}}'
     tag: '${{CF_BRANCH_TAG_NORMALIZED}}-${{CF_SHORT_REVISION}}'
-    registry: dockerhub
+    registry: 'dockerhub'
   
