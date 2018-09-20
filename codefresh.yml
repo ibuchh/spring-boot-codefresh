@@ -20,4 +20,10 @@ steps:
     metadata: # Declare the metadata attribute
       set: # Specify the set operation
         - build_style: non-multi-stage
+  PushingVoteToDockerRegistry:
+    title: Pushing to Docker Registry
+    type: push
+    candidate: '${{BuildingVoteDockerImage}}'
+    tag: '${{CF_BRANCH_TAG_NORMALIZED}}-${{CF_SHORT_REVISION}}'
+    registry: dockerhub
   
